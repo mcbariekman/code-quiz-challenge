@@ -44,23 +44,19 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
+    <!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <!-- Custom JS -->
     <script src="/application/questions.js"></script>
     <script>
       // Define the start button and quiz container
       var startBtn = $("#start-btn");
       var quizContainer = $("#quiz-container");
-
+     
+      // Define variables for the quiz
+      var timeLeft = 30;
+      var currentQuestion = 0;
+     
       // Define the click event listener for the start button
       startBtn.click(function() {
-        // Hide the start button and show the quiz container
-        startBtn.hide();
-        quizContainer.show();
-        // Start the quiz
-        startQuiz();
-      });
-
-      //
-</script>
-</body>
-</html>
+          // Hide the start button and
