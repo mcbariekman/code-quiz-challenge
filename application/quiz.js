@@ -1,9 +1,3 @@
-const startBtn = document.getElementById("start-btn");
-const quizQuestionsEl = document.querySelector(".quiz-questions");
-const quizTimerEl = document.getElementById("timer");
-const quizScoreEl = document.getElementById("score");
-const quizFormEl = document.querySelector(".quiz-form");
-
 // Define the click event listener for the start button
 startBtn.click(function() {
     // Hide the start button and show the quiz container
