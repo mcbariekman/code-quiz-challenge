@@ -1,59 +1,56 @@
-// Define the click event listener for the start button
-startBtn.click(function() {
-  // Hide the start button and show the quiz container
-  startBtn.hide();
-  quizContainer.show();
-  // Start the quiz
-  startQuiz();
-});
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1>Code Quiz</h1>
+      <p>Click the button below to start the quiz!</p>
+      <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+    </div>
+    <div class="container text-center" id="quiz-container" style="display: none;">
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+          <h2 id="question"></h2>
+          <div id="options"></div>
+          <hr>
+          <p>Time Left: <span id="time"></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center" id="gameover-container" style="display: none;">
+      <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+          <h2>Game Over!</h2>
+          <p>Your score: <span id="score"></span></p>
+          <form>
+            <div class="form-group">
+              <label for="initials">Enter your initials:</label>
+              <input type="text" class="form-control" id="initials">
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-// Function to start the quiz
-function startQuiz() {
-  // Define the variables for the timer and current question
-  var timeLeft = 30;
-  var currentQuestion = 0;
-
-  // Display the first question
-  displayQuestion(currentQuestion);
-
-  // Attach click event listener for the option buttons
-  $("#options").on("click", ".option-btn", function() {
-    var question = quiz[currentQuestion];
-    if ($(this).text() === question.answer) {
-      // Answer is correct, move to the next question
-      currentQuestion++;
-    } else {
-      // Answer is incorrect, subtract 10 seconds from the timer and move to the next question
-      timeLeft -= 10;
-      currentQuestion++;
-    }
-    if (currentQuestion < quiz.length) {
-      // Display the next question
-      displayQuestion(currentQuestion);
-    } else {
-      // Game over
-      gameOver();
-    }
-  });
-
-  // Start the timer
-  var timer = setInterval(function() {
-    timeLeft--;
-    $("#time").text(timeLeft);
-    if (timeLeft <= 0 || currentQuestion >= quiz.length) {
-      clearInterval(timer);
-      gameOver();
-    }
-  }, 1000);
-}
-
-// Function to display a question
-function displayQuestion(questionIndex) {
-  var question = quiz[questionIndex];
-  $("#question").text(question.question);
-  var options = "";
-  for (var i = 0; i < question.options.length; i++) {
-    options += "<button class='btn btn-primary option-btn'>" + question.options[i] + "</button>";
-  }
-  $("#options").html(options);
-}
+<!-- Custom JavaScript file -->
+<script src="/application/quiz.js"></script>
+<script src="/application/questions.js"></script>
+  </body>
+</html>
