@@ -35,14 +35,6 @@ var quiz = [
   // Define the start button and quiz container
   var startBtn = $("#start-btn");
   var quizContainer = $("#quiz-container");
-
-  startBtn.click(function() {
-    // Hide the start button and show the quiz container
-    startBtn.hide();
-    quizContainer.show();
-    // Start the quiz
-    startQuiz();
-  });
   
   // Define variables for the quiz
   var timeLeft = 30;
