@@ -12,5 +12,5 @@ _When the start button is clicked, the quiz container is displayed, and the quiz
 * gameOver(): Shows the game over screen, saves the high score, and displays a list of high scores.
 * saveHighScore(): Retrieves the user's initials, adds the current score to the high scores list, sorts the list in descending order, and saves the updated list to local storage.
 * showHighScores(): Retrieves the high scores from local storage and displays them in a list.
-![Live Page](--)
+![Live Page](./assets/usage.png)
 
