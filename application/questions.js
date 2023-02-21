@@ -94,3 +94,13 @@ function gameOver() {
   // Display the score
   $("#score").text(timeLeft);
 }
+
+// Get the user's initials from the form and store them in local storage
+var initials = $("#initials").val();
+localStorage.setItem("initials", initials);
+
+// Retrieve the initials from local storage and display them in the form
+var savedInitials = localStorage.getItem("initials");
+if (savedInitials !== null) {
+  $("#initials").val(savedInitials);
+}
