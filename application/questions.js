@@ -104,7 +104,7 @@ var quiz = [
   }
   
   // Function to show the game over screen
-  function gameOver() {
+function gameOver() {
     // Hide the quiz container and show the game over container
     quizContainer.hide();
     $("#gameover-container").show();
@@ -119,5 +119,7 @@ var quiz = [
     // Retrieve the initials from local storage and display them in the form
     var savedInitials = localStorage.getItem("initials");
     if (savedInitials !== null) {
-      $("#initial
+      $("#initials").val(savedInitials);
+    }
+  }
   
