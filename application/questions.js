@@ -1,26 +1,21 @@
 // Quiz Questions and Answers
 var quiz = [
-    {
-      question: "What kind of person says they are tired all the time?",
-      options: ["Paris", "London", "New York","Retard"],
-      answer: "Retard"
-    },
-    {
-      question: "What is a retard?",
-      options: ["Earth", "Mars", "Jupiter", "Madilyn"],
-      answer: "Madilyn"
-    },
-    {
-      question: "Who invented the telephone?",
-      options: ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "Albert Einstein"],
-      answer: "Alexander Graham Bell"
-    },
-    {
-      question: "What is the smallest country in the world?",
-      options: ["Vatican City", "Monaco", "San Marino", "Liechtenstein"],
-      answer: "Vatican City"
-    }
-  ];
+        {
+          question: "What does HTML stand for?",
+          options: ["Hyper Text Markup Language", "High Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language"],
+          answer: "Hyper Text Markup Language"
+        },
+        {
+          question: "What does CSS stand for?",
+          options: ["Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets", "Creative Style Sheets"],
+          answer: "Cascading Style Sheets"
+        },
+        {
+          question: "What does JS stand for?",
+          options: ["JavaScript", "JavaSource", "JavaSockets", "JavaServer"],
+          answer: "JavaScript"
+        }
+      ];
  
   // Define the start button and quiz container
   var startBtn = $("#start-btn");
