@@ -1,13 +1,83 @@
-body {
-    background-color: #f2f2f2;
-  }
-  
-  .container {
-    margin-top: 50px;
-  }
-  
-  #options button {
-    margin-top: 10px;
-  }
-  
-  
+#quiz-container {
+  margin-top: 50px;
+}
+
+#question {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-btn {
+  margin-bottom: 10px;
+}
+
+/* Styles for the game over container */
+#gameover-container {
+  margin-top: 50px;
+}
+
+/* Styles for the form in the game over container */
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Styles for the timer and score */
+#time {
+  font-weight: bold;
+}
+
+#score {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Styles for the start button */
+#start-btn {
+  margin-top: 50px;
+}
+
+/* Styles for the quiz header */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz-header h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.quiz-timer {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.quiz-score {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styles for the quiz form */
+.quiz-form {
+  margin-top: 50px;
+}
+
+.quiz-form label {
+  font-weight: bold;
+}
+
+.quiz-form input[type="text"] {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.quiz-form button[type="submit"] {
+  margin-left: 10px;
+}
